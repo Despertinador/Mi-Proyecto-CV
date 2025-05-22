@@ -1,0 +1,309 @@
+.user-container {
+    width: 25%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    box-sizing: border-box;
+    gap: 50px;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: 0px 0px 5px 0px var(--fondoD);
+    transition: background-color .5s ease, box-shadow .5s ease;
+}
+
+body.active .user-container {
+    box-shadow: 0px 0px 5px 0px var(--fondoL);
+}
+
+.user-container img {
+    width: 80%;
+    border-radius: 999px;
+    box-shadow: 0px 0px 10px 3px var(--fondoD);
+}
+
+body.active img {
+    box-shadow: 0px 0px 10px 3px var(--fondoL);
+}
+
+.refer-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.referes {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 25px;
+    width: 100%;
+}
+
+.referes span {
+    cursor: pointer;
+    font-weight: 300;
+    border-bottom: 2px solid transparent;
+    transition: font-weight .5s ease, border-bottom .5s ease;
+}
+
+.referes span:hover {
+    font-weight: 500;
+    border-bottom: 2px solid var(--fondoD);
+}
+
+body.active .referes span:hover {
+    font-weight: 500;
+    border-bottom: 2px solid var(--fondoL);
+}
+
+.select-container {
+    width: 50%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    border-radius:0px 10px 10px 0px;
+    box-shadow: 0px 0px 5px 0px var(--fondoD);
+    transition: background-color .5s ease, box-shadow .5s ease;
+}
+
+body.active .select-container {
+    box-shadow: 0px 0px 5px 0px var(--fondoL);
+}
+
+.menu {
+    width: 65px;
+    height: 65px;
+    padding: 10px;
+    border-radius: 999px;
+    box-shadow: 0px 0px 3px 1px var(--fondoD);
+    display: none;
+    transition: box-shadow .5s ease;
+}
+
+.menu:hover {
+    box-shadow: 0px 0px 7px 2px var(--fondoD);
+}
+
+body.active .menu {
+    box-shadow: 0px 0px 3px 1px var(--fondoL);
+}
+
+body.active .menu:hover {
+    box-shadow: 0px 0px 7px 2px var(--fondoL);
+}
+
+.external-referes {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 22px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--fondoL);
+}
+
+body.active .external-referes {
+    background-color: var(--fondoDL);
+}
+
+.external-referes span {
+    cursor: pointer;
+    font-weight: 300;
+    border-bottom: 2px solid transparent;
+    transition: font-weight .5s ease, border-bottom .5s ease;
+}
+
+.external-referes span:hover {
+    font-weight: 500;
+    border-bottom: 2px solid var(--fondoD);
+}
+
+body.active .external-referes span:hover {
+    font-weight: 500;
+    border-bottom: 2px solid var(--fondoL);
+}
+
+.closeR {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    scale: 1;
+    transition: scale .5s ease;
+}
+
+.closeR:hover {
+    scale: 1.05;
+}
+
+.externalDiv{
+    background-color: var(--fondoL);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 50px 25px 120px;
+    z-index: 50;
+    display: none;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 15px;
+}
+
+.externalDiv fieldset{
+    width: 98%;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.externalDiv img {
+    height: 30px;
+}
+
+body.active .externalDiv {
+    background-color: var(--fondoD);
+
+}
+
+.closeEX {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 35px;
+    align-self: center;
+    cursor: pointer;
+    scale: 1;
+    transition: scale .5s ease;
+    background-color: white;
+    border-radius: 999px;
+    box-shadow: 0px 0px 7px 2px var(--fondoDL);
+}
+
+.closeEX:hover {
+    scale: 1.05;
+}
+
+body.active .closeEX {
+    background-color: var(--fondoD);
+}
+
+
+@media screen and (max-width: 1260px) {
+    .user-container {
+        width: 25%;
+    }
+
+    .select-container {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 1750px) {
+
+    .select-container {
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-height: 1250px) {
+
+    .user-container {
+        gap: 25px;
+    }
+
+    .refer-container {
+        gap: 25px;
+    }
+
+    .referes {
+        gap: 15px;
+        font-size: 20px;
+    }
+
+    .user-container img {
+        width: 65%;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .user-container {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .user-container img {
+        max-width: 300px;
+    }
+
+    .referes {
+        display: none;
+    }
+
+    .referes span {
+        cursor: pointer;
+        font-weight: 300;
+        border-bottom: 2px solid transparent;
+        transition: font-weight .5s ease, border-bottom .5s ease;
+    }
+
+    .referes span:hover {
+        font-weight: 500;
+        border-bottom: 2px solid var(--fondoD);
+    }
+
+    .select-container {
+        display: none;
+    }
+
+    body.active .select-container {
+        box-shadow: 0px 0px 5px 0px var(--fondoL);
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu:hover {
+        box-shadow: 0px 0px 10px 3px var(--fondoD);
+    }
+}
+
+@media screen and (max-height: 700px) {
+
+    .referes {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu:hover {
+        box-shadow: 0px 0px 10px 3px var(--fondoD);
+    }
+
+}

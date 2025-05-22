@@ -1,0 +1,395 @@
+:root {
+    /*
+    --fondoL: #f8f8f8;
+    --fondoUL: #fffae9;
+    --fondoD: #544a23;
+    --fondoDL: #1a1606;
+
+    
+    --fondoL: #f7f7f7;
+    --fondoUL: #f4feff;
+    --fondoD: #0d4049;
+    --fondoDL: #02171c;
+
+    --fondoL: #fff9f7;
+    --fondoUL: #fff0eb;
+    --fondoD: #542817;
+    --fondoDL: #210900;
+*/
+
+    --fondoL: #ffffff;
+    --fondoUL: #f1f1f1;
+    --fondoD: #2e2e2e;
+    --fondoDL: #000000;
+
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: var(--fondoD);
+}
+
+body.active * {
+    color: var(--fondoUL);
+}
+
+body.macotoFont * {
+    font-family: "Macondo", cursive;
+}
+
+body.robotoFont * {
+    font-family: "Roboto", sans-serif;
+}
+
+.Inicial {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    backdrop-filter: blur(5px);
+}
+
+.Saludo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--fondoD);
+    width: 70%;
+    padding: 100px 125px 150px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.Saludo h2,
+h3, h4,
+p {
+    color: var(--fondoL);
+}
+
+.Saludo h2 {
+    font-size: 35px;
+}
+
+.Saludo h3 {
+    font-size: 27px;
+    text-align: center;
+}
+
+.Saludo h4{
+        text-align: center;
+}
+
+.Saludo p {
+    font-size: 20px;
+}
+
+.closeINIC {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    bottom: 75px;
+    align-self: center;
+    cursor: pointer;
+    scale: 1;
+    transition: scale .5s ease;
+    background-color: white;
+    border-radius: 999px;
+    box-shadow: 0px 0px 7px 3px rgb(94, 150, 180);
+    padding: 5px;
+}
+
+.closeINIC:hover {
+    scale: 1.05;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--fondoL);
+    transition: background-color .5s ease;
+}
+
+body.active {
+    background-color: var(--fondoD);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    box-shadow: 0px 0px 2px 1px var(--fondoD);
+    border-radius: 50%;
+    transition: box-shadow .5s ease;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 6px 2px var(--fondoD);
+}
+
+body.active .button {
+    box-shadow: 0px 0px 2px 1px var(--fondoL);
+}
+
+body.active .button:hover {
+    box-shadow: 0px 0px 6px 2px var(--fondoL);
+}
+
+#buton-option {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+#buton-log {
+    position: absolute;
+    top: 80px;
+    right: 25px;
+}
+
+.wheel {
+    width: 35px;
+    height: 35px;
+}
+
+.log {
+    width: 35px;
+    height: 35px;
+}
+
+.option-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+    top: -520px;
+    right: 10px;
+    width: 300px;
+    height: 500px;
+    background-color: var(--fondoUL);
+    box-shadow: 0px 0px 5px 2px var(--fondoD);
+    border-radius: 5px;
+    padding: 35px;
+    transition: transform .5s ease;
+    z-index: 99;
+}
+
+.option-container-visible {
+    transform: translateY(530px);
+}
+
+body.active .option-container {
+    box-shadow: 0px 0px 5px 2px var(--fondoL);
+    background-color: var(--fondoDL);
+}
+
+.mode {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dark-mode {
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    background-color: var(--fondoD);
+    transition: background-color .5s ease;
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+}
+
+body.active .dark-mode {
+    background-color: var(--fondoUL);
+}
+
+.circle {
+    width: 40%;
+    height: 80%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--fondoL);
+    transform: translateX(10%);
+    position: relative;
+    overflow: hidden;
+    transition: transform .5s ease, background-color .5s ease;
+}
+
+body.active .circle {
+    transform: translateX(140%);
+    background-color: var(--fondoD);
+}
+
+.dark-mode .circle ion-icon {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    transition: transform .5s ease;
+}
+
+.moon {
+    transform: translateY(-130%);
+}
+
+body.active .circle .moon {
+    transform: translateX(0);
+    color: var(--fondoUL);
+}
+
+.sun {
+    color: var(--fondoD);
+}
+
+body.active .circle .sun {
+    transform: translateY(130%);
+}
+
+.temas {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.color-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px 2px var(--fondoD);
+    cursor: pointer;
+}
+
+body.active .color {
+    box-shadow: 0px 0px 5px 2px var(--fondoL);
+}
+
+#quest {
+    background-color: #544a23;
+}
+
+#level {
+    background-color: #0d4049;
+}
+
+#tabern {
+    background-color: #542817;
+}
+
+#dark {
+    background-color: #2e2e2e;
+}
+
+
+.text-mode {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.font {
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#roboto {
+    font-family: "Roboto", sans-serif;
+}
+
+#montserrat {
+    font-family: "Montserrat", sans-serif;
+}
+
+#macondo {
+    font-family: "Macondo", cursive;
+}
+
+.up-option {
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--fondoUL);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px 2px var(--fondoD);
+    cursor: pointer;
+}
+
+body.active .up-option {
+    box-shadow: 0px 0px 5px 2px var(--fondoL);
+    background-color: var(--fondoD);
+}
+
+.arrow {
+    width: 50px;
+    height: 50px;
+}
+
+
+@media screen and (max-width: 850px) {
+
+    .Saludo p {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+
+    .option-container {
+        width: 95%;
+        height: 90vh;
+        top: -95vh;
+
+    }
+
+    .option-container-visible {
+        transform: translateY(97vh);
+    }
+
+    .log-container {
+        width: 95%;
+        height: 95vh;
+    }
+
+    .titleID {
+        top: 30vh;
+    }
+
+
+}

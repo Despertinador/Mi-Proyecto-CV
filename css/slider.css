@@ -1,0 +1,146 @@
+.slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 30px;
+}
+
+.semislide {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+
+.innerslide {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    gap: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.innerslide a {
+    text-decoration: none;
+}
+
+.imgBOX {
+    width: 80px;
+    height: 80px;
+    border-radius: 999px;
+    background-color: var(--fondoL);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgBOX img {
+    width: 60px;
+    height: 60px;
+}
+
+body.active .imgBOX img {
+    box-shadow: none;
+}
+
+.semislide fieldset {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.semislide .list {
+    padding: 25px;
+}
+
+.bloque-formativo {
+    background-color: var(--fondoL);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    z-index: 50;
+    display: none;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+
+}
+
+.bloque-formativo h4 img {
+    height: 40px;
+    border: 1px solid var(--fondoDL);
+}
+
+.bloque-formativo fieldset {
+    margin: 10px 0px;
+    padding: 30px;
+}
+
+.list li {
+    list-style: none;
+}
+
+
+body.active .bloque-formativo {
+    background-color: var(--fondoD);
+
+}
+
+body.active .bloque-formativo img {
+    box-shadow: 0px 0px 5px 1px var(--fondoDL);
+}
+
+.logoSocial{
+    background-color: var(--fondoL);
+}
+
+
+
+@media screen and (max-height: 1250px) {
+    .semislide {
+        font-size: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 1650px) {
+
+    .slide {
+        justify-content: left;
+        flex-direction: column;
+    }
+
+    .semislide {
+        width: 95%;
+    }
+
+    .container {
+        height: 200%;
+        overflow-y: unset;
+        padding-bottom: 50px;
+    }
+
+    .bloque-formativo {
+        height: 100%;
+        overflow-y: unset;
+    }
+
+}
