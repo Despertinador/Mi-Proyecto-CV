@@ -176,6 +176,14 @@ body.active .external-referes span:hover {
     border-radius: 5px;
 }
 
+.externalDiv fieldset h4{
+color: var(--fondoD);
+}
+
+body.active .externalDiv fieldset h4{
+color: var(--fondoL);
+}
+
 .externalDiv img {
     height: 30px;
 }
