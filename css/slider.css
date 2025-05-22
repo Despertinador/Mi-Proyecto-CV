@@ -37,6 +37,10 @@
     text-decoration: none;
 }
 
+.innerslide h4 {
+    color: var(--fondoD);
+}
+
 .imgBOX {
     width: 80px;
     height: 80px;
