@@ -41,6 +41,10 @@
     color: var(--fondoD);
 }
 
+body.active .innerslide h4 {
+    color: var(--fondoL);
+}
+
 .imgBOX {
     width: 80px;
     height: 80px;
